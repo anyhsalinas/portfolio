@@ -1,0 +1,782 @@
+<!--
+
+
+           — Porfolio: Shop Website —
+           by Anyh Salinas © 2021
+           www.anyhs-themes.tumblr.com
+
+           (Last update: 06/01/2021 — 16:28hrs)
+
+
+
+    TERMS OF USE (en):
+    ♦ Don't remove, adulterate, modify or move my credits;
+    ♦ Don't redistribute this code or parts of it;
+    ♦ Don't take this code or parts of it to create/upgrade other code(s);
+    ♦ Inspiration is allowed, as long as you don't fully copy my designs.
+    TERMOS DE USO (pt):
+    ♦ Não remova, adultere, modifique ou mova meus créditos;
+    ♦ Não redistribua este código ou partes dele;
+    ♦ Não pegue este código ou partes dele para criar/aprimorar outro código;
+    ♦ Inspirar-se é permitido, desde que não copie inteiramente meus designs.
+
+
+    CREDITS/CRÉDITOS:
+    ♦ Smooth Scroll: https://github.com/gblazex/smoothscroll
+    ♦ Tooltips: http://manos.malihu.gr/style-my-tooltips-jquery-plugin/
+    ♦ Fonts: https://fonts.google.com
+    ♦ Icons: FontAwesome (https://fontawesome.com/)
+             LinearIcons (https://linearicons.com/)
+             Saturn Icons (https://suiomi.com/font)
+             Honeybee (https://honeybee.suiomi.com/)
+    ♦ Emojis: https://www.joypixels.com
+
+
+    CONTACT/CONTATO:
+    ♦ www.anyhsthemes.tumblr.com/contact
+
+
+
+-->
+<!DOCTYPE>
+<html>
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <title>Anelise Salinas - Portfolio</title>
+    <link rel="shortcut icon" href="{Favicon}"/>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+
+<!-- fonts -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700|Roboto Mono:400,700|Fjalla One:400,700' rel='stylesheet' type='text/css'/>
+<!-- fonts -->
+
+<!-- jquery -->
+<script src="https://anyhsalinas.github.io/personal_content/jquery-latest-version.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- jquery -->
+
+<!-- icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"/>
+<link href="//dl.dropbox.com/s/50g6fbds3rh4m0j/saturnicons.css" rel="stylesheet">
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet"/>
+<!-- icons -->
+
+
+<style>
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #999;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 14px;
+    background: #eee;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #000;
+}
+::-webkit-scrollbar-thumb:vertical, ::-webkit-scrollbar-thumb:horizontal {background: #fff;}
+
+#all {}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 30px;
+    font-family: Georgia, sans-serif;
+    margin: 10px 0px;
+}
+
+p {margin: 10px 0px;}
+
+ul, ol {
+    margin: 10px 0px;
+    padding: 0px;
+}
+ul li, ol li {margin-left: 10px;}
+
+table {margin: 10px 0px;}
+
+blockquote {margin: 10px 0px;}
+
+figure {
+    margin: 10px 0px;
+    padding: 0px;
+    vertical-align: baseline;
+}
+figure img, img {
+    vertical-align: baseline;
+}
+
+a {
+    transition: .5s;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+a:hover {border-bottom: 1px solid #fff;}
+
+::selection {background:#444; color: #fff;}
+
+
+/** emojis **/
+img.joypixels {border: none !important; outline: none !important; width: 14px !important; height: auto !important; display: inline; margin: 0px 1px !important; vertical-align: sub;}
+blockquote img.joypixels {width: 14px !important;}
+
+
+/** tooltips **/
+#s-m-t-tooltip{
+    /* basic */
+    max-width: 300px;
+    z-index: 999;
+    margin: 14px 14px 7px 12px;
+    transition: 0s;
+    /* style and design */
+    padding: 3px 5px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: 10px;
+    line-height: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #111;
+    background: #222;
+    border: 1px solid #333;
+    box-shadow: 1px 1px 0px #000;
+}
+/** tooltips **/
+
+
+/** loading message **/
+#loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-align-items: center; /* Safari 7.0+ */
+    align-items: center;
+    background: #111;
+    background-size: cover;
+    background-position: center;
+    font-size: 14px;
+    opacity: 1;
+}
+#loading span {
+    max-width: 200px;
+    margin: 0px auto;
+    -webkit-flex: 1; /* Safari 6.1+ */
+    flex: 1;
+    padding: 10px;
+}
+
+
+
+/********** HEADER [starts] **********/
+header {
+    width: 100%;
+}
+
+header #top {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: calc(100% - 20px);
+    z-index: 10;
+}
+
+
+header #top-menu {
+    display: inline-table;
+}
+header #top-menu .top-menu-button, header #top-menu .top-menu-button a {
+    display: inline-block;
+}
+header #top-menu .top-menu-button {
+    margin-right: 10px;
+}
+header #top-menu .top-menu-button a {
+    padding: 3px;
+}
+header #top-menu .top-menu-button i {
+    margin-right: 3px;
+}
+
+
+header #user-menu {
+    display: inline-table;
+    float: right;
+}
+header #user-menu .user-menu-button, header #user-menu .user-menu-button a {
+    display: inline-block;
+}
+header #user-menu .user-menu-button {
+    margin-left: 10px;
+}
+header #user-menu .user-menu-button a {
+    padding: 3px 3px;
+}
+header #user-menu .user-menu-button i {
+    margin-right: 3px;
+}
+header #user-menu .user-menu-button.dropdown .dropdown-list {
+    display: none;
+}
+
+
+#slider {
+    background: url('https://images.unsplash.com/photo-1523480790568-0cc8ff425633?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1791&q=80');
+    background-size: 100% auto;
+    background-position: 0px -200px;
+    width: 100%;
+    height: 500px;
+}
+
+
+
+header #main-menu {
+    background: #000;
+    color: #fff;
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+header #main-menu .main-menu-button {
+    display: inline-block;
+}
+header #main-menu .main-menu-button a {
+    display: block;
+    padding: 10px 20px;
+}
+header #main-menu .main-menu-button:hover a {
+
+}
+
+header #main-menu .main-menu-button.dropdown {
+
+}
+header #main-menu .main-menu-button.dropdown .dropdown-list {
+    display: none;
+}
+/********** HEADER [ends] **********/
+
+
+
+/*************** MAIN CONTAINER [starts] *****/
+#main-container {
+    position: relative;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+#main-container h1 {
+    color: #000;
+    display: table;
+    margin: 20px auto;
+    padding: 0px 5px;
+    position: relative;
+    font-size: 30px;
+}
+#main-container h1:before, #main-container h1:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    margin: 0px 20px;
+}
+#main-container h1:before {right: 100%;}
+#main-container h1:after {left: 100%;}
+
+/*************** MAIN CONTAINER [ends] *****/
+
+
+/*************** PRODUCTS GRID [start] *****/
+article {
+    border-bottom: 1px solid #ddd;
+}
+.products-grid {
+    display: table;
+    margin: 20px auto;
+    text-align: center;
+}
+.products-grid .product {
+    display: inline-block;
+    padding: 10px;
+    width: 250px;
+    margin: 10px;
+    color: #000;
+    background: #fff;
+    box-shadow: 2px 2px 5px #aaa;
+    transition: .5s;
+}
+.products-grid .product:hover {
+    box-shadow: 8px 8px 8px #ccc;
+}
+.products-grid .product figure {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 0px;
+    background: #eee;
+    background-size: cover;
+    background-position: center;
+    transition: .5s;
+}
+.products-grid .product:hover figure {
+    transform: rotateY(180deg);
+}
+.products-grid .product p {
+    margin: 0px;
+    margin-top: 10px;
+}
+.products-grid .product .product-name {}
+.products-grid .product .product-price {
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+}
+/*************** PRODUCTS GRID [end] *****/
+
+
+/*************** INSTAGRAM WIDGET [start] *****/
+#instagram-widget {
+
+}
+#instagram-widget .instagram-widget-grid {
+    display: flex;
+    flex-wrap: nowrap;
+}
+#instagram-widget .instagram-widget-grid a {
+    display: inline-block;
+    min-width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transition: .5s;
+}
+#instagram-widget .instagram-widget-grid a:hover {
+    opacity: .8;
+}
+#instagram-widget .instagram-widget-grid a img {
+    width: 100%;
+}
+/*************** INSTAGRAM WIDGET [end] *****/
+
+
+/********** FOOTER [starts] **********/
+footer {
+    background: #ddd;
+}
+footer .footer-section {
+    padding: 10px;
+}
+footer .footer-section .footer-menu a {
+    display: block;
+    color: #000;
+}
+
+footer #credits {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 0px;
+    background: #000;
+    color: #fff;
+}
+/********** FOOTER [ends] **********/
+
+</style>
+</head>
+<body>
+
+<!-- GENERAL DIV [start] -->
+<div id="all">
+
+
+<!-- loading message -->
+<div id="loading"> <span class="box"> <i class="fa fa-spinner fa-pulse fa-fw" aria-hidden="true"></i> Loading... </span> </div>
+<!-- loading message -->
+
+
+<!--------- HEADER [starts] -->
+<header id="header">
+
+<!-- TOP [starts] -->
+<div id="top">
+
+
+<!-- TOP MENU [starts] -->
+<nav id="top-menu">
+    <div class="top-menu-button"> <a href="#"><i class="fas fa-home"></i> Home</a> </div>
+    <div class="top-menu-button"> <a href="#"><i class="fas fa-users"></i> About us</a> </div>
+    <div class="top-menu-button"> <a href="#"><i class="fas fa-question-circle"></i> Help Center</a> </div>
+    <div class="top-menu-button"> <a href="#"><i class="fas fa-comments"></i> Contact</a> </div>
+</nav><!-- #top-menu -->
+<!-- TOP MENU [ends] -->
+
+<!-- USER MENU [starts] -->
+<nav id="user-menu">
+    <div class="user-menu-button"> <a href="#"> <i class="fas fa-shopping-cart"></i> Shopping cart</a> </div>
+    <div class="user-menu-button"> <a href="#"> <i class="fas fa-heart"></i> Wishlist</a> </div>
+    <div class="user-menu-button dropdown"> <a href="#"> <i class="fas fa-user"></i>Account</a>
+        <ol class="dropdown-list">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+        </ol>
+    </div>
+</nav><!-- #user-menu -->
+<!-- USER MENU [ends] -->
+
+</div><!-- #top -->
+<!-- TOP [ends] -->
+
+
+<!-- SLIDER [starts] -->
+<div id="slider">
+</div><!-- #slider -->
+<!-- SLIDER [ends] -->
+
+
+<!-- MAIN MENU [starts] -->
+<nav id="main-menu">
+
+<!-- button 1 dropdown [starts] -->
+<div class="main-menu-button dropdown"> <a href="#" onclick="javascript: return false;">Link 1</a>
+<ol class="dropdown-list">
+    <a href="#"> <li>Link 1a</li> </a>
+    <a href="#"> <li>Link 1b</li> </a>
+    <a href="#"> <li>Link 1c</li> </a>
+    <a href="#"> <li>Link 1d</li> </a>
+    <a href="#"> <li>Link 1e</li> </a>
+    <a href="#"> <li>Link 1f</li> </a>
+    <a href="#"> <li>Link 1g</li> </a>
+</ol>
+</div><!-- .main-menu-button.dropdown -->
+<!-- button 1 dropdown [ends] -->
+
+<!-- button 2 dropdown [starts] -->
+<div class="main-menu-button dropdown"> <a href="#" onclick="javascript: return false;">Link 2</a>
+<ol class="dropdown-list">
+    <a href="#"> <li>Link 2a</li> </a>
+    <a href="#"> <li>Link 2b</li> </a>
+    <a href="#"> <li>Link 2c</li> </a>
+    <a href="#"> <li>Link 2d</li> </a>
+    <a href="#"> <li>Link 2e</li> </a>
+    <a href="#"> <li>Link 2f</li> </a>
+    <a href="#"> <li>Link 2g</li> </a>
+    <a href="#"> <li>Link 2h</li> </a>
+    <a href="#"> <li>Link 2i</li> </a>
+    <a href="#"> <li>Link 2j</li> </a>
+</ol>
+</div><!-- .main-menu-button.dropdown -->
+<!-- button 2 dropdown [ends] -->
+
+<div class="main-menu-button"> <a href="#">Link 3</a> </div>
+<div class="main-menu-button"> <a href="#">Link 4</a> </div>
+<div class="main-menu-button"> <a href="#">Link 5</a> </div>
+<div class="main-menu-button"> <a href="#">Link 6</a> </div>
+</nav><!-- #main-menu -->
+<!-- MAIN MENU [ends] -->
+
+</header><!-- #header -->
+<!--------- HEADER [ends] -->
+
+
+<!--------- MAIN CONTAINER [starts] -->
+<main id="main-container">
+
+<!-- LATEST PRODUCTS [start] -->
+<article id="latest">
+<h1>Latest products</h1>
+
+<!-- GRID [start] -->
+<div class="products-grid">
+
+<!-- product [start] -->
+<a href="#" class="product">
+    <figure style="background-image: url('https://images.unsplash.com/photo-1546521716-d4402fbc8b5e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&auto=format&fit=crop&w=600&q=60');"/></figure>
+
+    <p>
+    <span class="product-name">Product Name</span>
+    <span class="product-price">U$0,00</span>
+    </p>
+</a><!-- .product -->
+<!-- product [end] -->
+
+<!-- product [start] -->
+<a href="#" class="product">
+    <figure style="background-image: url('https://images.unsplash.com/photo-1542556398-b665428620ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=626&q=80');"/></figure>
+
+    <p>
+    <span class="product-name">Product Name</span>
+    <span class="product-price">U$0,00</span>
+    </p>
+</a><!-- .product -->
+<!-- product [end] -->
+
+<!-- product [start] -->
+<a href="#" class="product">
+    <figure style="background-image: url('https://images.unsplash.com/photo-1542556398-3c9a71885fab?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8&auto=format&fit=crop&w=600&q=60');"/></figure>
+
+    <p>
+    <span class="product-name">Product Name</span>
+    <span class="product-price">U$0,00</span>
+    </p>
+</a><!-- .product -->
+<!-- product [end] -->
+
+<!-- product [start] -->
+<a href="#" class="product">
+    <figure style="background-image: url('https://images.unsplash.com/photo-1542556398-9e1da7ad3669?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8&auto=format&fit=crop&w=600&q=60');"/></figure>
+
+    <p>
+    <span class="product-name">Product Name</span>
+    <span class="product-price">U$0,00</span>
+    </p>
+</a><!-- .product -->
+<!-- product [end] -->
+
+</div><!-- .products-grid -->
+<!-- GRID [end] -->
+
+</article><!-- #latest -->
+<!-- LATEST PRODUCTS [end] -->
+
+
+
+<!-- MOST POPULAR PRODUCTS [start] -->
+<article id="most-popular">
+<h1>Most popular</h1>
+
+<!-- GRID [start] -->
+<div class="products-grid">
+
+<!-- product [start] -->
+<a href="#" class="product">
+    <figure style="background-image: url('https://images.unsplash.com/photo-1551993005-75c4131b6bd8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxMjY1MTcyfHxlbnwwfHx8&auto=format&fit=crop&w=600&q=60');"/></figure>
+
+    <p>
+    <span class="product-name">Product Name</span>
+    <span class="product-price">U$0,00</span>
+    </p>
+</a><!-- .product -->
+<!-- product [end] -->
+
+<!-- product [start] -->
+<a href="#" class="product">
+    <figure style="background-image: url('https://images.unsplash.com/photo-1585083969600-495ee7e3604b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8&auto=format&fit=crop&w=600&q=60');"/></figure>
+
+    <p>
+    <span class="product-name">Product Name</span>
+    <span class="product-price">U$0,00</span>
+    </p>
+</a><!-- .product -->
+<!-- product [end] -->
+
+<!-- product [start] -->
+<a href="#" class="product">
+    <figure style="background-image: url('https://images.unsplash.com/photo-1481973946307-512988dde8b1?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');"/></figure>
+
+    <p>
+    <span class="product-name">Product Name</span>
+    <span class="product-price">U$0,00</span>
+    </p>
+</a><!-- .product -->
+<!-- product [end] -->
+
+<!-- product [start] -->
+<a href="#" class="product">
+    <figure style="background-image: url('https://images.unsplash.com/photo-1454329001438-1752daa90420?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fG11Z3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');"/></figure>
+
+    <p>
+    <span class="product-name">Product Name</span>
+    <span class="product-price">U$0,00</span>
+    </p>
+</a><!-- .product -->
+<!-- product [end] -->
+
+</div><!-- .products-grid -->
+<!-- GRID [end] -->
+
+</article><!-- #most-popular -->
+<!-- MOST POPULAR PRODUCTS [end] -->
+
+
+<!-- INSTAGRAM WIDGET [start] -->
+<div id="instagram-widget">
+    <h1>Follow us on Instagram:</h1>
+
+<div class="instagram-widget-grid">
+
+    <a href="#"> <img src="https://images.unsplash.com/photo-1512706915233-69e415f58e56?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=60"/> </a>
+
+    <a href="#"> <img src="https://images.unsplash.com/photo-1514246116330-69e19f7e1df2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8&auto=format&fit=crop&w=600&q=60"/> </a>
+
+    <a href="#"> <img src="https://images.unsplash.com/photo-1519610490110-4433c2b50d90?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60"/> </a>
+
+    <a href="#"> <img src="https://images.unsplash.com/photo-1592927552561-711ebfce7d5d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60"/> </a>
+
+    <a href="#"> <img src="https://images.unsplash.com/photo-1514680606657-ea558153038a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8&auto=format&fit=crop&w=600&q=60"/> </a>
+
+    <a href="#"> <img src="https://images.unsplash.com/photo-1513283317701-bd79fb4c0ca1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8&auto=format&fit=crop&w=600&q=60"/> </a>
+
+
+</div><!-- .instagram-widget-grid -->
+
+</div><!-- #instagram-widget -->
+<!-- INSTAGRAM WIDGET [end] -->
+
+</main><!-- #main-container -->
+<!--------- MAIN CONTAINER [ends] -->
+
+
+
+<!-- FOOTER [starts] -->
+<footer id="footer">
+
+
+<!-- FOOTER SECTION [start] -->
+<div class="footer-section">
+<nav class="footer-menu">
+    <a href="#">Home</a>
+    <a href="#">About us</a>
+    <a href="#">Help Center</a>
+    <a href="#">Contact</a>
+</nav><!-- .footer-menu -->
+</div><!-- .footer-section -->
+<!-- FOOTER SECTION [end] -->
+
+
+<!-- FOOTER SECTION [start] -->
+<div class="footer-section">
+<nav class="footer-menu">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+    <a href="#">Link 5</a>
+</nav><!-- .footer-menu -->
+</div><!-- .footer-section -->
+<!-- FOOTER SECTION [end] -->
+
+
+<div id="credits">&copy; Design by Anelise Salinas &mdash; Photos by <a href="https://unsplash.com/" target="_blank">Unsplash</a> &mdash; 2021</div>
+
+</footer><!-- #footer -->
+<!-- FOOTER [ends] -->
+
+</div><!-- #all -->
+<!-- GENERAL DIV [end] -->
+
+</body>
+
+<!-- emojis reader (emojis by https://www.joypixels.com) -->
+<script src='https://cdn.jsdelivr.net/npm/emoji-toolkit@4.5.2/lib/js/joypixels.min.js'></script>
+<script type='text/javascript'>
+$(document).ready(function(){
+    function convertToEmoji() {
+      $("p:not(.block_emojis), blockquote:not(.block_emojis), li, u, a").each(function(){
+            var input = $(this).html();
+            var output = joypixels.toImage(input);
+            $(this).html(output);
+        });
+}; convertToEmoji();
+    $(".joypixels").attr("title", "");
+});
+</script>
+<!-- emojis reader (emojis by https://www.joypixels.com) -->
+
+<!-- tooltips -->
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+    $("[title]").style_my_tooltips({
+        tip_follows_cursor:true,
+        tip_delay_time:0,
+        tip_fade_speed:0,
+        attribute:"title"
+    });
+});
+})(jQuery);
+</script>
+<!-- tooltips -->
+
+<!-- smooth scroll -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.js"></script>
+<script>
+SmoothScroll({
+    // Scrolling Core
+    animationTime    : 700, // [ms]
+    stepSize         : 100, // [px]
+    // Acceleration
+    accelerationDelta : 50,  // 50
+    accelerationMax   : 3,   // 3
+    // Keyboard Settings
+    keyboardSupport   : true,  // option
+    arrowScroll       : 100,    // [px]
+    // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm   : true,
+    pulseScale       : 4,
+    pulseNormalize   : 1,
+    // Other
+    touchpadSupport   : false, // ignore touchpad by default
+    fixedBackground   : true,
+    excluded          : ''
+});
+</script>
+<!-- smooth scroll -->
+
+
+<script>
+$(window).ready(function () {
+
+
+    /********** back to top button **********/
+    $(this).scroll(function(){
+        if ($(this).scrollTop() >= 100) {
+            $(".btt-button").fadeIn("slow");
+        } else {
+            $(".btt-button").fadeOut("slow");
+        };
+    });
+    $(".btt-button").click(function(){
+        $("html, body").animate({
+            scrollTop: '0px'
+        }, 500);
+        return false;
+    });
+   /********** back to top button **********/
+
+
+    /********** loading message **********/
+    setTimeout(function() {
+        $("#loading").fadeOut(1000, "swing");
+    }, 200);
+    /** hide in preview **/
+    var bloglink = "anyhs-themes.tumblr.com/cv";
+    if (location.hostname != bloglink) {
+        $("#loading").css({"display":"none"});
+    };
+    /********** loading message [end] **********/
+
+
+});
+</script>
+</html>
