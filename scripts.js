@@ -13,11 +13,13 @@ l_en.forEach(function(item){item.style.display="none"});
 document.getElementById("l_pt-btn").onclick = function(){
     language = "pt";
     translatePage();
+    loadProjects();
     return false;
 };
 document.getElementById("l_en-btn").onclick = function(){
     language = "en";
     translatePage();
+    loadProjects();
     return false;
 };
 
@@ -71,84 +73,87 @@ window.onresize = function() {
 
 
 
-/***** SKILLS MENU *****/
-document.querySelectorAll("#skills li a").forEach(function(item){
-    item.onclick = function(){
-        let hash = item.getAttribute("href");
-        alert(hash);
-        document.querySelector("section #feat").innerHTML="yoe";
-    }; // onclick
-});
-
 /***** OPENING *****/
+var featTag;
 document.querySelectorAll("#opening nav a").forEach(function(item) {
-    var featTag = item.getAttribute("href").slice(1);
     item.onclick = function(){
+
+        featTag = item.getAttribute("href").slice(1);
         
-        /***** LOAD PROJECTS *****/
-        function loadProjects() {
-
-            document.querySelectorAll("main section").forEach(function(item){
-
-                let sectionID = item.getAttribute("id");
-                let sectionTag = item.getAttribute("tag");
-
-                for(c = 0; c < projectsData.length; c++) {
-                    if(language = "pt") {
-                        cName = projectsData[c].name.pt;
-                        cDescription = projectsData[c].description.pt;
-                        seeStr = "Ver";
-                        codeStr = "Código";
-                    } else {
-                        cName = projectsData[c].name.en;
-                        cDescription = projectsData[c].description.en;
-                        seeStr = "See";
-                        codeStr = "Code";
-                    }; // if
-                    
-                    cImg = projectsData[c].img;
-                    cLink = projectsData[c].link;
-                    cCode = projectsData[c].code;
-                    cTags = projectsData[c].tags;
-
-
-                    function renderProject() {
-
-                        if(cCode) {
-                            var codeButton = '<a href="' + cCode + '" target="_blank"><i class="fas fa-code"></i> ' + codeStr + '</a>';
-                        } else {
-                            var codeButton = " ";
-                        }; // if
-
-                        var renderProject = '<div class="box item" data-aos="fade-up"><figure><img src="' + cImg + '"/></figure> <div class="item-cover"><div class="item-cover-content"> <a href="' + cLink + '" target="_blank"><i class="far fa-eye"></i> ' + seeStr + '</a> ' + codeButton + '</div><!-- .item-cover-content --></div><!-- .item-cover --> <h3 class="item-title">' + cName + '</h3> <p>' + cDescription + '</p> </div><!-- .item -->';
-
-                        item.querySelector(".masonry-grid").insertAdjacentHTML("afterbegin", renderProject);
-
-                    }; // renderProject()
-                    
-                    if((sectionTag == featTag) && cTags.includes(sectionID)) {
-                        renderProject();
-                    } else if((featTag == "all") && cTags.includes(sectionID)) {
-                        renderProject();
-                    }; // if
-                    
-                }; // for
-
-                if((sectionTag != featTag) && (featTag != "all")) {
-                    item.remove();
-                }; // if
-
-            }); // forEach
-
-        }; loadProjects();
-
-        translatePage();
-        masonryGrid();
+        loadProjects();
 
         document.querySelector("#opening").remove();
         return false;
     }; // onclick
 }); // forEach
+
+
+/***** LOAD PROJECTS *****/
+function loadProjects() {
+
+    if(featTag) {
+
+        document.querySelectorAll("main section").forEach(function(item){
+
+            if(item.querySelector(".masonry-grid").children.length > 0) {
+                item.querySelector(".masonry-grid").innerHTML = "";
+            }; // if
+
+            let sectionID = item.getAttribute("id");
+            let sectionTag = item.getAttribute("tag");
+
+            for(c = 0; c < projectsData.length; c++) {
+                if(language == "pt") {
+                    cName = projectsData[c].name.pt;
+                    cDescription = projectsData[c].description.pt;
+                    seeStr = "Ver";
+                    codeStr = "Código";
+                } else {
+                    cName = projectsData[c].name.en;
+                    cDescription = projectsData[c].description.en;
+                    seeStr = "See";
+                    codeStr = "Code";
+                }; // if
+                
+                cImg = projectsData[c].img;
+                cLink = projectsData[c].link;
+                cCode = projectsData[c].code;
+                cTags = projectsData[c].tags;
+
+
+                function renderProject() {
+
+                    if(cCode) {
+                        var codeButton = '<a href="' + cCode + '" target="_blank"><i class="fas fa-code"></i> ' + codeStr + '</a>';
+                    } else {
+                        var codeButton = " ";
+                    }; // if
+
+                    var renderProject = '<div class="box item" data-aos="fade-up"><figure><img src="' + cImg + '"/></figure> <div class="item-cover"><div class="item-cover-content"> <a href="' + cLink + '" target="_blank"><i class="far fa-eye"></i> ' + seeStr + '</a> ' + codeButton + '</div><!-- .item-cover-content --></div><!-- .item-cover --> <h3 class="item-title">' + cName + '</h3> <p>' + cDescription + '</p> </div><!-- .item -->';
+
+                    item.querySelector(".masonry-grid").insertAdjacentHTML("afterbegin", renderProject);
+
+                }; // renderProject()
+                
+                if((sectionTag == featTag) && cTags.includes(sectionID)) {
+                    renderProject();
+                } else if((featTag == "all") && cTags.includes(sectionID)) {
+                    renderProject();
+                }; // if
+                
+            }; // for
+
+            if((sectionTag != featTag) && (featTag != "all")) {
+                item.remove();
+            }; // if
+
+        }); // forEach
+        
+        masonryGrid();
+        
+    }; // if
+
+}; // loadProjects();
 
 
 
