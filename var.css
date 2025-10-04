@@ -1,0 +1,59 @@
+/** colors: light version **/
+:root {
+
+    --mainBgColor: #e2e2e2;
+    --textsShadow: 1px 1px 2px #383838;
+    --bordersColor: #c5c5c5;
+
+    /** header **/
+    --headerBgColor: #bba27e;
+    --headerBgImg: ;
+    --headerTitleColor: #ffffff;
+    --headerDescriptionColor: #505050;
+
+
+    /** fonts **/
+    --mainFontColor: #707070;
+    --titlesFontColor: #525252;
+    --linksColor: #968263;
+    --mainFontFamily: 'Poppins', Verdana, sans-serif;
+    --headerFontFamily: 'Rouge Script', Georgia, serif;
+    --titlesFontFamily: 'Vidaloka', Georgia, serif;
+
+
+    /** font sizes **/
+    --mainFontSize: 14px;
+    --headerTitleFontSize: 3.7em;
+    --titlesFontSize: 1.3em;
+
+
+    /** transition **/
+    --baseTransition: .5s ease-in-out;
+
+
+    /** boxes **/
+    --boxesBgColor: #f7f7f7;
+    --boxesCoverColor: #ffffffd0;
+    --boxesPadding: 10px;
+    --boxesSpacing: 20px;
+    --boxesShadow: /*2px 2px 0px #ccc*/;
+
+
+    /** menus **/
+    --buttonsBgColor: #9d8562;
+    --buttonsFontColor: #ffffff;
+    --buttonsBgColorHover: #949494;
+    --buttonsFontColorHover: #ffffff;
+    --buttonsPadding: 5px;
+    --buttonsShadow: 2px 2px 2px #00000055;
+    --buttonsRadius: 10px;
+
+
+    /** aside/sidebar **/
+    --sidebarSize: 20%;
+
+    /** small elements **/
+    --smallElementsPadding: 3px;
+    --smallElementsSpacing: 3px;
+    --smallElementsRadius: 20px;
+}

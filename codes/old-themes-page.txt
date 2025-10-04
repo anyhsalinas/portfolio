@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Anyh's Themes: Theme History</title>
+<link rel="shortcut icon" href="{Favicon}"/>
+
+<!-- jquery -->
+<script src="https://anyhsalinas.github.io/personal_content/jquery-latest-version.min.js"></script>
+<!-- jquery -->
+
+<!-- FontAwesome icons -->
+<script src="https://kit.fontawesome.com/f7e4f513cb.js" crossorigin="anonymous"></script>
+<!-- FontAwesome icons -->
+
+<!-- fonts -->
+<link href='https://fonts.googleapis.com/css?family=Vidaloka|Rajdhani:400,700|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'/>
+<!-- fonts -->
+
+<style>
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #111;
+    color: #999;
+    font-family: 'Rajdhani';
+    font-size: 15px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: #111;
+}
+::-webkit-scrollbar-thumb {
+    background:  #999;
+    border: 1px solid #222;
+}
+
+h1, h2 {
+    margin: 40px auto 20px auto;
+    font-family: "Vidaloka";
+    font-weight: normal;
+    font-size: 40px;
+    text-align: center;
+    display: table;
+    color: #fff;
+}
+h2 {
+    font-size: 22px;
+    margin: 0px auto;
+    color: #aaa;
+}
+
+p.desc {
+    color: #aaa;
+    display: table;
+    margin: -20px auto 30px auto;
+    padding-top: 5px;
+    width: 500px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+blockquote {
+    width: 90%;
+    max-width: 800px;
+    margin: 10px auto;
+    text-align: justify;
+    background: #1a1a1a;
+    border: 1px solid #222;
+    padding: 10px;
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+    transition: .5s;
+}
+
+figure {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+nav#menu {
+    width: 100%;
+    background: #000;
+    text-align: center;
+    display: table;
+}
+nav#menu a {
+    display: inline-table;
+    color: #fff;
+    margin: 0px 10px;
+    padding: 10px;
+    transform: rotateX(0deg);
+}
+nav#menu a:hover {
+    transform: rotateX(360deg);
+    color: #777;
+}
+
+nav#menu u {
+    background: #fff;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    margin-bottom: 2px;
+    transform: rotate(45deg);
+}
+
+
+#caixas {
+    width: calc(100% - 10px);
+    margin: 30px auto 0px auto !important;
+    display: grid;
+    grid: auto / 25% 25% 25% 25%;
+    text-align: center;
+}
+
+#caixas .caixa {
+    background: #000;
+    padding: 10px;
+    margin: 10px;
+}
+#caixas .caixa figure {
+    margin: 10px -10px 0px -10px;
+    width: calc(100% + 20px);
+    opacity: .8;
+    transition: .5s;
+}
+#caixas .caixa:hover figure {
+    opacity: 1;
+}
+
+#caixas .caixa nav {
+    display: grid;
+    grid: auto / calc(50% - 2px) calc(50% - 2px);
+    grid-gap: 4px;
+    width: 100%;
+    margin-top: 5px;
+}
+#caixas .caixa nav a {
+    background: #1a1a1a;
+    padding: 5px;
+    color: #aaa;
+}
+#caixas .caixa nav a:hover {
+    color: #777;
+    background: #111;
+}
+
+
+footer {
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+footer a {
+    color: #fff;
+}
+footer a:hover {
+    color: #777;
+}
+
+#popup-message {
+    background: rgba(10,10,10,.7);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+#popup-message .message {
+    position: relative;
+    background: black;
+    padding: 10px;
+    text-align: center;
+    display: table;
+    margin: 0px auto;
+    box-shadow: 5px 5px 5px black;
+}
+#popup-message .close-button {
+    position: absolute;
+    font-size: 16px;
+    width: 20px;
+    top: 0px;
+    right: 0px;
+    background: #222;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+    #caixas {grid: auto / 33.3% 33.3% 33.3%;}
+}
+
+@media only screen and (max-width: 700px) {
+    #caixas {grid: auto / 50% 50%;}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<nav id="menu">
+    <a href="/"> Home</a> <u></u>
+    <a href="/contact"> <span class="l_pt">Contato</span> <span class="l_en">Contact</span> </a> <u></u>
+    <a href="/themes"> <span class="l_pt">Temas atuais</span> <span class="l_en">Latest themes</span> </a> <u></u>
+    <a href="/commissions"> <span class="l_pt">Encomendas</span> <span class="l_en">Commissions</span> </a> <u></u>
+    <a href="/tutorials"> <span class="l_pt">Tutoriais</span> <span class="l_en">Tutorials</span> </a>
+</nav><!-- #menu -->
+
+<h1> <span class="l_pt">Meu histórico de temas</span> <span class="l_en">My themes history</span> </h1>
+
+<p class="desc">
+<span class="l_pt"> Para quem estiver interessado(a) em ter acesso aos meus temas e páginas antigos, eu os estou mantendo disponíveis aqui.</span>
+<span class="l_en"> For anybody interested on having access to my old themes and pages, I'm keeping them available here.</span>
+</p><!-- .desc -->
+
+<blockquote>
+<span class="l_pt"> <b>⚠ AVISO:</b> Meus temas antigos não estão mais recebendo atualizações, por isso <strong>eu não recomendo usá-los</strong> já que eles podem logo ficar desatualizados e começar a apresentar problemas. Meu foco está todo voltado para meus novos trabalhos, portanto <strong>eu não estou mais oferecendo suporte para meus temas antigos</strong>. Fique ciente também de que os meus temas mais velhos possuem menos qualidade e menos opções de personalização do que meus temas atuais.</span>
+<span class="l_en"> <b>⚠ WARNING:</b> My old themes are not getting updates anymore, so <strong>I don't recommend using them</strong> since they might soon get outdated and start having issues. My focus is all directed to my newest works, so <strong>I'm no longer offering support for my old themes</strong>. Also the very old ones have lower quality and less customization options than my current themes, and some of them are only in Portuguese.</span>
+</blockquote>
+
+</header>
+
+<!---------- CAIXAS [começo] ---------->
+<div id="caixas">
+
+
+<!-- CAIXA #45 [começo] -->
+<div class="caixa">
+<h2>Theme #45</h2>
+<figure> <img src="https://78.media.tumblr.com/d668d5d0dad3922bfa62750a3d22c2e8/tumblr_pb3gib9M7B1skyizio1_r2_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme45.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-45.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #45 [fim] -->
+
+<!-- CAIXA #44 [começo] -->
+<div class="caixa">
+<h2>Theme #44</h2>
+<figure> <img src="http://68.media.tumblr.com/b9285e000ca1374a555589cfe305ce67/tumblr_ovii81TPpk1skyizio1_r1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme44.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="#" class="indispo"> <span class="l_pt">Indisponível</span> <span class="l_en">Unavailable</span> [?]</a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #44 [fim] -->
+
+<!-- CAIXA #43 [começo] -->
+<div class="caixa">
+<h2>Theme #43</h2>
+<figure> <img src="http://68.media.tumblr.com/3973f0d8a3892b3e91bc984a83cf2abc/tumblr_oulzw4l6161skyizio1_r1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme43.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="#" class="indispo"> <span class="l_pt">Indisponível</span> <span class="l_en">Unavailable</span> [?]</a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #43 [fim] -->
+
+<!-- CAIXA #42 [começo] -->
+<div class="caixa">
+<h2>Theme #42</h2>
+<figure> <img src="http://68.media.tumblr.com/4bc5e02099d2714770a8bae79ffcb968/tumblr_osmcseMn9J1skyizio1_r1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme42.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-42.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #42 [fim] -->
+
+<!-- CAIXA #41 [começo] -->
+<div class="caixa">
+<h2>Theme #41</h2>
+<figure> <img src="https://68.media.tumblr.com/f32cba667d68c0dfe8af39baf274d178/tumblr_om3gxgxfzS1skyizio1_r2_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme41.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-41.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #41 [fim] -->
+
+<!-- CAIXA #40 [começo] -->
+<div class="caixa">
+<h2>Theme #40</h2>
+<figure> <img src="http://68.media.tumblr.com/e937c0704b917eba1d38a1a1e2dba145/tumblr_ol5xnyh5go1skyizio1_r1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme40.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-40.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #40 [fim] -->
+
+<!-- CAIXA #39 [começo] -->
+<div class="caixa">
+<h2>Theme #39</h2>
+<figure> <img src="http://68.media.tumblr.com/2161a8b943e9e79d5e928482a2130256/tumblr_oklp0m9IfT1skyizio1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme39.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-39.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #39 [fim] -->
+
+<!-- CAIXA #38 [começo] -->
+<div class="caixa">
+<h2>Theme #38</h2>
+<figure> <img src="http://68.media.tumblr.com/539c7dc1ae2990686f6ec8fa1b62ee68/tumblr_ojdxygkd7p1skyizio1_r2_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme38.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="#" class="indispo"> <span class="l_pt">Indisponível</span> <span class="l_en">Unavailable</span> [?]</a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #38 [fim] -->
+
+<!-- CAIXA #37 [começo] -->
+<div class="caixa">
+<h2>Theme #37</h2>
+<figure> <img src="https://68.media.tumblr.com/6c9c824b63485650e477f40c8939a4fb/tumblr_ohthn9MEYJ1skyizio1_r1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme37.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="#" class="indispo"> <span class="l_pt">Indisponível</span> <span class="l_en">Unavailable</span> [?]</a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #37 [fim] -->
+
+<!-- CAIXA #36 [começo] -->
+<div class="caixa">
+<h2>Theme #36</h2>
+<figure> <img src="https://68.media.tumblr.com/902c8620c9d7a8323381d0336674f17a/tumblr_ogn4xh5rz81skyizio1_r1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme36.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="#" class="indispo"> <span class="l_pt">Indisponível</span> <span class="l_en">Unavailable</span> [?]</a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #36 [fim] -->
+
+<!-- CAIXA #35 [começo] -->
+<div class="caixa">
+<h2>Theme #35</h2>
+<figure> <img src="http://68.media.tumblr.com/91e776f4ed177c020c2c9bfb18b87a20/tumblr_oeqie1NQa21skyizio1_r1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme35.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="#" class="indispo"> <span class="l_pt">Indisponível</span> <span class="l_en">Unavailable</span> [?]</a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #35 [fim] -->
+
+<!-- CAIXA #34 [começo] -->
+<div class="caixa">
+<h2>Theme #34</h2>
+<figure> <img src="https://68.media.tumblr.com/48719743bbff9704c5aa6923106b6779/tumblr_odtg0iT9O81skyizio1_r1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme34.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://anyhsthemes.blogspot.com/2023/05/tumblr-theme-034-blossom.html" target="_blank"> <span class="l_pt">Código</span> <span class="l_en">Code</span></a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #34 [fim] -->
+
+<!-- CAIXA #33 [começo] -->
+<div class="caixa">
+<h2>Theme #33</h2>
+<figure> <img src="http://68.media.tumblr.com/27ab5f03bed162f3bb9165c77f7efe5c/tumblr_oe1n79uyza1skyizio1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme33.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-33.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #33 [fim] -->
+
+<!-- CAIXA #32 [começo] -->
+<div class="caixa">
+<h2>Theme #32</h2>
+<figure> <img src="http://68.media.tumblr.com/1dd993a2cb9468ca2c1c2e5f225b22a4/tumblr_odmwzo0v7v1skyizio1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme32.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-32.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #32 [fim] -->
+
+<!-- CAIXA #31 [começo] -->
+<div class="caixa">
+<h2>Theme #31</h2>
+<figure> <img src="https://68.media.tumblr.com/2a7b745b1cfe3be800cb3b283e17d903/tumblr_ocx98unSKy1skyizio1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme31.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="#" class="indispo"> <span class="l_pt">Indisponível</span> <span class="l_en">Unavailable</span> [?]</a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #31 [fim] -->
+
+<!-- CAIXA #30 [começo] -->
+<div class="caixa">
+<h2>Theme #30</h2>
+<figure> <img src="http://68.media.tumblr.com/09aed8422b928394aafa6e5dcad7d6a6/tumblr_oc417rGODE1skyizio1_r1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme30.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="#" class="indispo"> <span class="l_pt">Indisponível</span> <span class="l_en">Unavailable</span> [?]</a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #30 [fim] -->
+
+<!-- CAIXA #29 [começo] -->
+<div class="caixa">
+<h2>Theme #29</h2>
+<figure> <img src="http://68.media.tumblr.com/2f1f62e0fa442460bba50e58c2928347/tumblr_obipln1L7i1skyizio1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme29.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-29.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #29 [fim] -->
+
+<!-- CAIXA #28 [começo] -->
+<div class="caixa">
+<h2>Theme #28</h2>
+<figure> <img src="http://68.media.tumblr.com/e08269cdb88e49192752b99ac7b50823/tumblr_o9z28j9T371skyizio1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme28.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-28.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #28 [fim] -->
+
+<!-- CAIXA #27 [começo] -->
+<div class="caixa">
+<h2>Theme #27</h2>
+<figure> <img src="https://68.media.tumblr.com/b7793bcf807d102048f46c5ea85e1f4b/tumblr_o71q5iHQA71skyizio1_r1_540.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme27.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-27.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #27 [fim] -->
+
+<!-- CAIXA #26 [começo] -->
+<div class="caixa">
+<h2>Theme #26</h2>
+<figure> <img src="http://68.media.tumblr.com/93a6404bf17a0eef4735a069448ca929/tumblr_noxwadA1oP1skyizio1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme26.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-26.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #26 [fim] -->
+
+<!-- CAIXA #25 [começo] -->
+<div class="caixa">
+<h2>Theme #25</h2>
+<figure> <img src="http://68.media.tumblr.com/33b7c41e2669cf17460421a607f8b492/tumblr_nf7b6fxbX71skyizio1_r2_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme25.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-25.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #25 [fim] -->
+
+<!-- CAIXA #24 [começo] -->
+<div class="caixa">
+<h2>Theme #24</h2>
+<figure> <img src="http://68.media.tumblr.com/a5840ea3fa17eb8526091fc78e0b8bfa/tumblr_n6zplkQcU81skyizio1_r3_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme24.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-24.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #24 [fim] -->
+
+<!-- CAIXA #23 [começo] -->
+<div class="caixa">
+<h2>Theme #23</h2>
+<figure> <img src="http://68.media.tumblr.com/273d041936312f3d58de00272f0684c1/tumblr_n6qo6xjpUA1skyizio1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme23.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-23.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #23 [fim] -->
+
+<!-- CAIXA #22 [começo] -->
+<div class="caixa">
+<h2>Theme #22</h2>
+<figure> <img src="http://68.media.tumblr.com/a881c5ec6067b6f913846172e5e9ec9d/tumblr_nhqq3n0T8U1skyizio1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme22.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-22.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #22 [fim] -->
+
+<!-- CAIXA #21 [começo] -->
+<div class="caixa">
+<h2>Theme #21</h2>
+<figure> <img src="https://68.media.tumblr.com/ae174b4b9673f3886380b33dd7590392/tumblr_n33xvwgyVs1skyizio1_r2_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme21.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-21.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #21 [fim] -->
+
+<!-- CAIXA #20 [começo] -->
+<div class="caixa">
+<h2>Theme #20</h2>
+<figure> <img src="https://68.media.tumblr.com/701b99fae92373b7beb0b6d6ad395d5f/tumblr_n33xrvwfYw1skyizio1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme20.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-20.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #20 [fim] -->
+
+<!-- CAIXA #19 [começo] -->
+<div class="caixa">
+<h2>Theme #19</h2>
+<figure> <img src="https://68.media.tumblr.com/983661088d7f60855fc3a34a30d31f01/tumblr_nzc0rhe1l11skyizio1_r1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme19.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-19.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #19 [fim] -->
+
+<!-- CAIXA #18 [começo] -->
+<div class="caixa">
+<h2>Theme #18</h2>
+<figure> <img src="http://68.media.tumblr.com/f2f1a5c7b8b40f4700bda2f1b2c32264/tumblr_ng6l0rhFxH1skyizio1_r2_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme18.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-18.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #18 [fim] -->
+
+<!-- CAIXA #17 [começo] -->
+<div class="caixa">
+<h2>Theme #17</h2>
+<figure> <img src="http://68.media.tumblr.com/24925377da040b0ac5e588846ae161e0/tumblr_n0n5nzNNOa1skyizio1_r2_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme17.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-17.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #17 [fim] -->
+
+<!-- CAIXA #16 [começo] -->
+<div class="caixa">
+<h2>Theme #16</h2>
+<figure> <img src="https://68.media.tumblr.com/97e414660341a4d17c90e02a3aeebb72/tumblr_nu4z8bzCMs1skyizio1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme16.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-16.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #16 [fim] -->
+
+<!-- CAIXA #15 [começo] -->
+<div class="caixa">
+<h2>Theme #15</h2>
+<figure> <img src="https://68.media.tumblr.com/ebbf667c90a71c3cae05e3cad0714d8f/tumblr_mz3xtj3L041skyizio1_r4_540.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme15.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-15.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #15 [fim] -->
+
+<!-- CAIXA #14 [começo] -->
+<div class="caixa">
+<h2>Theme #14</h2>
+<figure> <img src="http://68.media.tumblr.com/b0713285e2f468fbd459abdf20e72393/tumblr_nsuyuqWc521skyizio1_r2_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme14.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-14.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #14 [fim] -->
+
+<!-- CAIXA #13 [começo] -->
+<div class="caixa">
+<h2>Theme #13</h2>
+<figure> <img src="https://68.media.tumblr.com/7b78983a0f81c927b9f16a7fed67d309/tumblr_o2d8xpN7iP1skyizio1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme13.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-13.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #13 [fim] -->
+
+<!-- CAIXA #12 [começo] -->
+<div class="caixa">
+<h2>Theme #12</h2>
+<figure> <img src="http://68.media.tumblr.com/a022bf9986cd70db8ecf49891a9ea8f0/tumblr_mxxcw5J00o1skyizio1_r2_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme12.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-12.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #12 [fim] -->
+
+<!-- CAIXA #11 [começo] -->
+<div class="caixa">
+<h2>Theme #11</h2>
+<figure> <img src="http://68.media.tumblr.com/bc80128ffaaa8d6f76b10712995deeb1/tumblr_mxxcp34wud1skyizio1_r3_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme11.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-11.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #11 [fim] -->
+
+<!-- CAIXA #10 [começo] -->
+<div class="caixa">
+<h2>Theme #10</h2>
+<figure> <img src="https://68.media.tumblr.com/0531f8799b964cfdce8c22cc7fade75d/tumblr_o5c1h1KDqT1skyizio1_r5_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme10.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-10.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #10 [fim] -->
+
+<!-- CAIXA #09 [começo] -->
+<div class="caixa">
+<h2>Theme #09</h2>
+<figure> <img src="https://68.media.tumblr.com/4ec3975cd3816b57e9b011b1a78daeaa/tumblr_nts4ccYfb61skyizio1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme09.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-09.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #09 [fim] -->
+
+<!-- CAIXA #08 [começo] -->
+<div class="caixa">
+<h2>Theme #08</h2>
+<figure> <img src="http://68.media.tumblr.com/07c2bf82ea4d822814a530abfee9b07c/tumblr_mwwci97R0w1skyizio1_r4_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme08.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-08.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #08 [fim] -->
+
+<!-- CAIXA #07 [começo] -->
+<div class="caixa">
+<h2>Theme #07</h2>
+<figure> <img src="https://68.media.tumblr.com/711b8c68e348f4fc044e9b6727124b11/tumblr_nzl6eceY2c1skyizio1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme07.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-07.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #07 [fim] -->
+
+<!-- CAIXA #06 [começo] -->
+<div class="caixa">
+<h2>Theme #06</h2>
+<figure> <img src="http://68.media.tumblr.com/f8377a0cd32c4953d1bca586d5435197/tumblr_n8rq2tbbE31skyizio1_r3_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme06.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-06.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #06 [fim] -->
+
+<!-- CAIXA #05 [começo] -->
+<div class="caixa">
+<h2>Theme #05</h2>
+<figure> <img src="http://68.media.tumblr.com/524c362f510108a796469e7101cd8afc/tumblr_mwbdl0FObo1skyizio1_r1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme05.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-05.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #05 [fim] -->
+
+<!-- CAIXA #04 [começo] -->
+<div class="caixa">
+<h2>Theme #04</h2>
+<figure> <img src="http://68.media.tumblr.com/585b9303720e4f6213b28763d8a5f627/tumblr_nkj9l8rD3w1skyizio1_r2_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme04.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-04.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #04 [fim] -->
+
+<!-- CAIXA #03 [começo] -->
+<div class="caixa">
+<h2>Theme #03</h2>
+<figure> <img src="http://68.media.tumblr.com/f844eb8d59beb874912af716d437e84c/tumblr_mwbde4DZVo1skyizio1_r6_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme03.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-03.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #03 [fim] -->
+
+<!-- CAIXA #02 [começo] -->
+<div class="caixa">
+<h2>Theme #02</h2>
+<figure> <img src="http://68.media.tumblr.com/9faaf23c2a12b296083cf03122976aa9/tumblr_nzf23r5RiT1skyizio1_250.gif"/> </figure>
+
+<nav>
+<a href="https://anyhstheme02.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-02.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #02 [fim] -->
+
+<!-- CAIXA #01 [começo] -->
+<div class="caixa">
+<h2>Theme #01</h2>
+<figure> <img src="http://68.media.tumblr.com/261c25a46b594f57236994f7621d9796/tumblr_oa9jl6eL141skyizio1_r1_250.jpg"/> </figure>
+
+<nav>
+<a href="https://anyhstheme01.tumblr.com/"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/free-codes/main/tb-themes-old/theme-01.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA #01 [fim] -->
+    
+</div><!-- #caixas -->
+<!---------- CAIXAS [fim] ---------->
+
+
+
+<h1> <span class="l_pt">Minhas antigas páginas personalizadas:</span> <span class="l_en">My old custom pages:</span> </h1>
+
+
+<!---------- CAIXAS [começo] ---------->
+<div id="caixas">
+
+
+<!-- CAIXA [começo] -->
+<div class="caixa">
+<h2>Página de membros #01</h2>
+<figure> <img src="https://64.media.tumblr.com/a934f2d5ce3fdc37c7378d8285f81dd7/tumblr_opoye2L18y1skyizio1_540.jpg"/> </figure>
+
+<nav>
+<a href="http://anyhsthemes.tumblr.com/custom-pages/members-page-01"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/my-available-codes/master/paginas/members-page-01.html"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA [fim] -->
+
+<!-- CAIXA [começo] -->
+<div class="caixa">
+<h2>Página Vitrine #01</h2>
+<figure> <img src="https://64.media.tumblr.com/be603a9029e6686641cd246c31d3a518/tumblr_oewfx8x3Ah1skyizio1_540.jpg"/> </figure>
+
+<nav>
+<a href="http://anyhsthemes.tumblr.com/custom-pages/vitrine-page-01"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/my-available-codes/master/paginas/vitrine-page-01.html"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA [fim] -->
+
+<!-- CAIXA [começo] -->
+<div class="caixa">
+<h2>Página de Links #02</h2>
+<figure> <img src="https://64.media.tumblr.com/5eaf7ff80a67c10d6e33f86914481cb3/tumblr_oew58yasTl1skyizio1_540.jpg"/> </figure>
+
+<nav>
+<a href="http://anyhsthemes.tumblr.com/custom-pages/links-page-02"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/my-available-codes/master/paginas/links-page-02.html"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA [fim] -->
+
+<!-- CAIXA [começo] -->
+<div class="caixa">
+<h2>Página de Links #01</h2>
+<figure> <img src="https://64.media.tumblr.com/4d41f7738da33c8fc3634cc53b8de2cc/tumblr_oc73fnB3Ig1skyizio1_r1_540.jpg"/> </figure>
+
+<nav>
+<a href="http://anyhsthemes.tumblr.com/custom-pages/links-page-01"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/my-available-codes/master/paginas/links-page-01.html"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA [fim] -->
+
+<!-- CAIXA [começo] -->
+<div class="caixa">
+<h2>Blogroll #01</h2>
+<figure> <img src="https://64.media.tumblr.com/1004e6db7dc3b9716e81001aeb8acf50/tumblr_nzyh3nZ9t51skyizio1_500.jpg"/> </figure>
+
+<nav>
+<a href="http://anyhsthemes.tumblr.com/custom-pages/blogroll-01"> <span class="l_pt">Pré-visualizar</span> <span class="l_en">Preview</span> </a>
+<a href="https://raw.githubusercontent.com/anyhsalinas/my-available-codes/master/paginas/blogroll-page-01.txt"> <span class="l_pt">Código</span> <span class="l_en">Code</span> </a>
+</nav>
+</div><!-- .caixa -->
+<!-- CAIXA [fim] -->
+
+</div><!-- #caixas -->
+<!---------- CAIXAS 2 [fim] ---------->
+
+
+
+<footer>
+    &copy; <u><a href="/">Anyh's Themes</a></u> by <u><a href="https://anyhs.tumblr.com">Anyh Salinas</a></u>
+</footer>
+
+
+
+<div id="popup-message">
+<div class="message">
+<h2> <span class="l_pt">Temas Indisponíveis</span> <span class="l_en">Unavailable Themes</span> </h2>
+    
+    <p>
+    <span class="l_pt">Meus antigos Temas Premium estão todos indisponíveis por estarem desatualizados.</span>
+    <span class="l_en">My old Premium themes are out of sale or distribution for being outdated.</span>
+    </p>
+    
+    <div class="close-button"><i class="fas fa-times"></i></div>
+    </div><!-- .message -->
+</div><!-- #popup-message -->
+
+</body>
+<script>
+$(document).ready(function(){
+    
+    /** translate **/
+    var langua = navigator.language;
+    if(langua == "pt-BR" || langua == "pt-PT") {
+        $(".l_pt").css({"display":"inline"});
+        $(".l_pt_block").css({"display":"block"});
+        $(".l_pt_inlineblock").css({"display":"inline-block"});
+        
+        $(".l_en, .l_en_block, .l_en_inlineblock").css({"display":"none"});
+    } else {
+        $(".l_en").css({"display":"inline"});
+        $(".l_en_block").css({"display":"block"});
+        $(".l_en_inlineblock").css({"display":"inline-block"});
+        
+        $(".l_pt, .l_pt_block, .l_pt_inlineblock").css({"display":"none"});
+    }
+    
+    
+    $("#popup-message").hide();
+    $(".indispo").each(function(){
+        $(this).click(function(){
+            $("#popup-message").fadeIn(500);
+            return false;
+        });
+    });
+    $("#popup-message .close-button").click(function(){
+        $("#popup-message").fadeOut(500);
+        return false;
+    });
+
+});
+</script>
+</html>

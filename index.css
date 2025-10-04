@@ -1,0 +1,552 @@
+@import url('var.css');
+
+/********** CSS **********/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--mainBgColor);
+    color: var(--mainFontColor);
+    font-family: var(--mainFontFamily);
+    font-size: var(--mainFontSize);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: var(--mainBgColor);
+}
+::-webkit-scrollbar-thumb:vertical, ::-webkit-scrollbar-thumb:horizontal {
+    background: var(--buttonsBgColor);
+    border: 1px solid var(--bordersColor);
+}
+::-webkit-scrollbar-thumb:vertical:hover, ::-webkit-scrollbar-thumb:horizontal:hover {background: var(--buttonsBgColorHover);} 
+
+::selection {
+    background: var(--linksColor);
+    color: var(--mainBgColor);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--titlesFontFamily);
+    color: var(--titlesFontColor);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+h1 {font-size: 2.5em;}
+h2 {font-size: 2em;}
+h3, h4, h5, h6 {
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--titlesFontColor);
+}
+
+h3:last-child {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    transition: var(--baseTransition);
+    color: var(--linksColor);
+    text-decoration: none;
+}
+a:hover {color: var(--mainFontColor);}
+
+figure {
+    overflow: hidden;
+    margin: 0px;
+}
+figure img {
+    transition: var(--baseTransition);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: -3px;
+}
+
+
+/** tooltips **/
+#s-m-t-tooltip{
+    /* basic */
+    max-width: 300px;
+    z-index: 99999999999;
+    margin: 14px 14px 7px 12px;
+    /* style and design */
+    padding: 3px 5px;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    background: var(--buttonsBgColor);
+    color: var(--buttonsFontColor);
+    box-shadow: 1px 1px 5px var(--boxesShadow);
+    border: 1px solid var(--bordersColor);
+    transition: var(--baseTransition);
+}
+/** tooltips **/
+
+
+/***** loading message *****/
+#loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999999999;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-align-items: center; /* Safari 7.0+ */
+    align-items: center;
+    background: var(--mainBgColor);
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+}
+#loading #loading-content {
+    -webkit-flex: 1; /* Safari 6.1+ */
+    flex: 1;
+}
+
+
+/** back to top button **/
+.btt-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+    display: none;
+}
+.btt-button a.box {
+    display: table;
+    text-align: center;
+    margin: 0px auto;
+    padding: 12px 15px;
+    font-size: 18px;
+    height: 10px;
+    width: 22px;
+    background: var(--buttonsBgColor);
+    border: 1px solid var(--bordersColor);
+}
+
+.btt-button a i {
+    display: inline-block;
+    color: var(--buttonsFontColor);
+    transition: 0.5s;
+    transform-origin: 50% 50%;
+}
+.btt-button a:hover i {
+    color: var(--buttonsFontColorHover);
+    transform: rotate(360deg);
+}
+
+
+/***** default *****/
+.box {
+    background: var(--boxesBgColor);
+    padding: var(--boxesPadding);
+    margin: var(--boxesSpacing);
+    box-shadow: var(--boxesShadow);
+    border: 1px solid var(--bordersColor);
+    transition: var(--baseTransition);
+}
+
+
+/** menus **/
+.menu {
+    display: table;
+    text-align: center;
+}
+.menu .menu-button {
+    display: inline-table;
+}
+.menu .menu-button a {
+    display: block;
+    padding: var(--buttonsPadding) calc(2 * var(--buttonsPadding));
+    background: var(--buttonsBgColor);
+    color: var(--buttonsFontColor);
+    border: 1px solid var(--bordersColor);
+}
+.menu .menu-button:hover a {
+    background: var(--buttonsBgColorHover);
+    color: var(--buttonsFontColorHover);
+}
+
+
+
+/** CONTROLS MENU **/
+#controls-menu.menu {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: 10px;
+    z-index: 99999;
+}
+#controls-menu.menu .menu-button {
+    display: inline-table;
+    margin: 1px;
+}
+#controls-menu.menu .menu-button i.golight {
+    display: none;
+}
+
+#controls-menu.menu .menu-button .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 1px;
+    transition: .5s;
+    transform: scaleY(0);
+    transform-origin: 0px 0px;
+}
+#controls-menu.menu .menu-button:hover .dropdown {
+    transform: scale(1.0);
+}
+
+#controls-menu.menu .menu-button:hover .dropdown a {
+    white-space: pre;
+    background: var(--buttonsBgColor);
+    color: var(--buttonsFontColor);
+}
+#controls-menu.menu .menu-button:hover .dropdown a:hover {
+    background: var(--buttonsBgColorHover);
+    color: var(--buttonsFontColorHover);
+}
+
+
+
+/***** OPENING *****/
+#opening {
+    background-color: var(--mainBgColor);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    align-content: center;
+    text-align: center;
+    font-size: 2em;
+}
+#opening .opening-content {
+    display: table;
+    margin: 0px auto;
+    list-style: none;
+}
+
+#opening nav {
+    display: flex;
+    margin-top: 40px;
+}
+@media only screen and (max-width: 900px) {
+    #opening nav {display: block;}
+}
+
+#opening nav a {
+    display: inline-block;
+    background-color: var(--buttonsBgColor);
+    color: var(--buttonsFontColor);
+    padding: 20px 40px;
+    border: 1px solid var(--bordersColor);
+    border-radius: var(--buttonsRadius);
+    margin: 5px;
+    font-size: 0.7em;
+    transition: var(--baseTransition);
+}
+#opening nav a:hover {
+    background-color: var(--buttonsBgColorHover);
+    color: var(--buttonsFontColorHover);
+}
+
+#opening nav a i {margin-right: 10px;}
+
+
+
+/********** HEADER **********/
+#header {
+    position: relative;
+    background: var(--headerBgColor) var(--headerBgImg);
+    background-blend-mode: luminosity;
+    padding: 10px;
+    z-index: 3;
+    border-bottom: 1px solid var(--bordersColor);
+}
+#header .header-content {
+    text-align: center;
+    padding: 20px;
+}
+#header h1 {
+    font-size: var(--headerTitleFontSize);
+    font-family: var(--headerFontFamily);
+    color: var(--headerTitleColor);
+    text-shadow: var(--textsShadow);
+    margin: 0px;
+}
+#header #header-description {
+    display: table;
+    margin: 0px auto;
+    margin-top: -5px;
+    font-style: italic;
+    color: var(--headerDescriptionColor);
+}
+
+
+/*** CONTENT ***/
+#content {
+    display: grid;
+    grid-template: auto / calc(100% - var(--sidebarSize)) var(--sidebarSize);
+    margin: var(--boxesSpacing);
+}
+
+@media only screen and (max-width: 1300px) {
+    #content { grid-template: auto / 70% 30%;}
+}
+
+@media only screen and (max-width: 900px) {
+    #content {display: block;}
+}
+
+main {
+    text-align: center;
+    display: table;
+}
+main section h1 {
+    text-align: left;
+    margin: calc(2 * var(--boxesSpacing)) 0px 0px var(--boxesSpacing);
+    display: table;
+    width: calc(100% - (2 * var(--boxesSpacing)));
+}
+main section:first-of-type h1 {
+    margin-top: 0px;
+}
+
+main section .section-description {
+    text-align: left;
+    border-bottom: 1px solid var(--bordersColor);
+    display: table;
+    width: calc(100% - (4 * var(--boxesPadding)));
+    padding-bottom: var(--boxesPadding);
+    padding-top: 0px;
+    margin: 0px 0px var(--boxesPadding) var(--boxesSpacing);
+}
+
+main .masonry-grid {
+    text-align: center;
+}
+main .item {
+    display: inline-block;
+    width: calc(50% - (2 * var(--boxesSpacing)));
+}
+
+section#old .item, section#long .item {
+    display: inline-block;
+    width: calc(33.3% - (2 * var(--boxesSpacing)));
+}
+section#short .item {
+    display: inline-block;
+    width: calc(25% - (2 * var(--boxesSpacing)));
+}
+
+@media only screen and (max-width: 1300px) {
+    main .item, section#long .item {width: calc(100% - (2 * var(--boxesSpacing)));}
+    section#old .item, section#long .item {width: calc(50% - (2 * var(--boxesSpacing)));}
+    section#short .item {width: calc(33.3% - (2 * var(--boxesSpacing)));}
+}
+@media only screen and (max-width: 900px) {
+    section#long .item {width: calc(100% - (2 * var(--boxesSpacing)));}
+    section#short .item {width: calc(50% - (2 * var(--boxesSpacing)));}
+}
+
+main .item figure {
+    overflow: hidden;
+    margin-bottom: var(--boxesPadding);
+    border-bottom: 1px solid var(--bordersColor);
+    padding-bottom: var(--boxesPadding);
+}
+main .item:hover img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    transform: scale(1.1);
+}
+
+main .item h3.item-title {
+    display: table;
+    margin: 0px auto;
+    margin-bottom: var(--boxesPadding);
+}
+
+
+
+main .item .item-cover {
+    background: var(--boxesCoverColor);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    font-size: 1.2em;
+    /* backdrop-filter: blur(2px); */
+    opacity: 0;
+    transition: var(--baseTransition);
+}
+main .item:hover .item-cover {opacity: 1;}
+
+main .item .item-cover a {
+    background: var(--buttonsBgColor);
+    padding: var(--boxesPadding) calc(2 * var(--boxesPadding));
+    color: var(--buttonsFontColor);
+    border: 1px solid var(--bordersColor);
+    box-shadow: var(--buttonsShadow);
+    border-radius: var(--buttonsRadius);
+}
+main .item .item-cover a:hover {
+    background: var(--buttonsBgColorHover);
+    color: var(--buttonsFontColorHover);
+}
+
+main .item .item-cover a i {margin-right: 5px;}
+
+
+
+
+
+
+/********** BOTTOM MENU **********/
+#bottom-menu.menu {
+    margin: 40px auto;
+}
+#bottom-menu.menu .menu-button:hover {
+    letter-spacing: 1px;
+}
+
+#bottom-menu.menu .menu-button a {font-size: var(--titlesFontSize);}
+#bottom-menu.menu .menu-button u {
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    font-style: italic;
+    margin-top: 2px;
+    letter-spacing: 0px;
+    opacity: .7;
+}
+
+
+
+/********** ASIDE **********/
+aside {position: relative;}
+aside .sidebar {
+    position: fixed;
+    margin-top: 0px;
+}
+
+aside#mobile-sidebar .sidebar {
+    position: relative;
+    width: 60%;
+    margin: 0px auto;
+}
+
+.sidebar-header {
+    background: var(--headerBgColor);
+    margin: calc(0px - var(--boxesPadding));
+    margin-bottom: var(--boxesPadding);
+    padding: var(--boxesPadding);
+    border-bottom: 1px solid var(--bordersColor);
+}
+
+
+.sidebar figure.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;;
+    border: 1px solid var(--bordersColor);
+    float: left;
+}
+
+.sidebar-header h2 {
+    color: var(--headerTitleColor);
+    text-shadow: var(--textsShadow);
+    margin: 0px;
+    line-height: 40px;
+}
+
+.sidebar ul, .sidebar form {
+    list-style: none;
+    
+}
+
+.sidebar #skills, .sidebar #skills p {
+    display: table;
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: var(--boxesPadding);
+}
+
+.sidebar #skills li {
+    display: inline-block;
+    margin: var(--smallElementsSpacing);
+    border: 1px solid var(--bordersColor);
+    padding: var(--smallElementsPadding) calc(3 * var(--smallElementsPadding));
+    border-radius: var(--smallElementsRadius);
+    background-color: var(--mainBgColor);
+}
+.sidebar #skills li i {
+    margin-right: var(--smallElementsPadding);
+}
+
+.sidebar nav.menu {
+    display: table;
+    margin: 0px auto;
+    margin-top: var(--boxesPadding);
+}
+.sidebar nav.menu .menu-button a {
+    border-radius: var(--buttonsRadius);
+    margin: var(--buttonsPadding);
+}
+
+
+
+
+/********** FOOTER **********/
+#footer {
+    background: var(--headerBgColor);
+    padding: 10px;
+    border-top: 1px solid var(--bordersColor);
+}
+#footer .menu {margin: 0px auto;}
+#footer .menu-button {
+    display: inline-block;
+    margin: 5px;
+}
+#footer .menu-button a {
+    border-radius: 100%;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    width: 2em;
+    height: 2em;
+    padding: 0px;
+    align-content: center;
+}
+#footer .menu-button i {vertical-align: middle;}
+
+
+/******************** MOBILE VERSION ********************/
+@media only screen and (max-width: 1300px) {
+
+    #old-themes-section main {
+        grid: auto / calc(50% - 5px) calc(50% - 5px);
+    }
+
+}
+@media only screen and (max-width: 900px) {
+
+    main {
+        grid: auto / 100%;
+    }
+
+}
