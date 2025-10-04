@@ -363,8 +363,6 @@ section#short .item {
 main .item figure {
     overflow: hidden;
     margin-bottom: var(--boxesPadding);
-    border-bottom: 1px solid var(--bordersColor);
-    padding-bottom: var(--boxesPadding);
 }
 main .item:hover img {
     width: 100%;
@@ -374,9 +372,10 @@ main .item:hover img {
 }
 
 main .item h3.item-title {
-    display: table;
-    margin: 0px auto;
     margin-bottom: var(--boxesPadding);
+    padding-bottom: var(--boxesPadding);
+    border-bottom: 1px solid var(--bordersColor);
+    font-size: 1.2em;
 }
 
 
@@ -402,7 +401,6 @@ main .item .item-cover a {
     color: var(--buttonsFontColor);
     border: 1px solid var(--bordersColor);
     box-shadow: var(--buttonsShadow);
-    border-radius: var(--buttonsRadius);
 }
 main .item .item-cover a:hover {
     background: var(--buttonsBgColorHover);
