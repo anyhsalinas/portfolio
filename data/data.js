@@ -5,8 +5,8 @@ let projectsData = [
                 "pt": "Theme #04"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "A grid theme for Tumblr with a very subtle sidebar (released on March 1st from 2015, but updated at 2016, I only don't have the exact day of this update).",
+                "pt": "Um tema em grade para Tumblr com uma sidebar bem sútil (lançado em 01/03/2015, mas atualizado em 2016, eu só não tenho salvo o dia exato dessa atualização)."
             },
             "img": "http://68.media.tumblr.com/585b9303720e4f6213b28763d8a5f627/tumblr_nkj9l8rD3w1skyizio1_r2_250.jpg",
             "link": "https://anyhstheme04.tumblr.com",
@@ -19,8 +19,8 @@ let projectsData = [
                 "pt": "Theme #13"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "A grid Tumblr theme with an interactive sidebar (released on February 11th of 2016, but updated at May 21th of 2021).",
+                "pt": "Um tema em grade para Tumblr com uma sibebar interativa (lançado em 11/02/2016, mas atualizado em 21/05/2021)."
             },
             "img": "https://68.media.tumblr.com/7b78983a0f81c927b9f16a7fed67d309/tumblr_o2d8xpN7iP1skyizio1_250.gif",
             "link": "https://anyhstheme13.tumblr.com",
@@ -33,8 +33,8 @@ let projectsData = [
                 "pt": "Theme #22"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "A simple but classy grid theme for Tumblr (released on January 7th of 2015).",
+                "pt": "Um tema em grade para Tumblr simples, mas elegante (lançado em 07/01/2015)."
             },
             "img": "http://68.media.tumblr.com/a881c5ec6067b6f913846172e5e9ec9d/tumblr_nhqq3n0T8U1skyizio1_250.gif",
             "link": "https://anyhstheme22.tumblr.com",
@@ -47,8 +47,8 @@ let projectsData = [
                 "pt": "Theme #28"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "A Tumblr themes with a layout a little more on the classic side and clean stylization (released on July 8th of 2016).",
+                "pt": "Um tema para Tumblr com um layout um pouco mais clássico e estilo mais clean (lançado em 08/07/2016)."
             },
             "img": "https://64.media.tumblr.com/e08269cdb88e49192752b99ac7b50823/tumblr_o9z28j9T371skyizio1_250.jpg",
             "link": "https://anyhstheme28.tumblr.com",
@@ -61,8 +61,8 @@ let projectsData = [
                 "pt": "Theme #37"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "One of my first paid themes. It's a Tumblr theme with a classic layout for blogs and quite a lot of spaces for the users to fill in its sidebars. The code is not available since it's exclusive (released on January 5th of 2017).",
+                "pt": "Um dos meus primeiros temas pagos. É um tema para Tumblr com um layout clássico para blogs e vários espaços para os usuários preencherem em suas duas sidebars. Seu código está indisponível por ser exclusivo (lançado em 05/01/2017)."
             },
             "img": "https://68.media.tumblr.com/6c9c824b63485650e477f40c8939a4fb/tumblr_ohthn9MEYJ1skyizio1_r1_250.jpg",
             "link": "https://anyhstheme37.tumblr.com",
@@ -75,8 +75,8 @@ let projectsData = [
                 "pt": "Theme #42"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "A grid Tumblr theme with a long sidebar (released on July 7th of 2017).",
+                "pt": "Um tema em grade para Tumblr com uma longa sidebar (lançado em 07/07/2017)."
             },
             "img": "http://68.media.tumblr.com/4bc5e02099d2714770a8bae79ffcb968/tumblr_osmcseMn9J1skyizio1_r1_250.gif",
             "link": "https://anyhstheme42.tumblr.com",
@@ -89,8 +89,8 @@ let projectsData = [
                 "pt": "Theme #43"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "Another Premium theme I made for Tumblr that I like a lot. This theme has the option of using the posts in one, two or three columns in its settings. The code is unavailable since it's exclusive (released on August 18th of 2017).",
+                "pt": "Outro tema Premium que eu fiz para Tumblr que eu gosto bastante. Esse tema tem a opção de usar os posts em uma, duas ou três colunas em suas configurações. O código está indisponível por ser exclusivo (lançado em 18/08/2017)."
             },
             "img": "https://64.media.tumblr.com/3973f0d8a3892b3e91bc984a83cf2abc/tumblr_oulzw4l6161skyizio1_r1_250.gif",
             "link": "https://anyhstheme43.tumblr.com",
@@ -103,8 +103,8 @@ let projectsData = [
                 "pt": "Theme #45"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "Another grid theme for Tumblr. Unlike my older themes this one is responsive, however it does not have a mobile version like my latest ones (released on September 3rd of 2018).",
+                "pt": "Outro tema em grade para Tumblr. Ao contrário dos meus temas mais antigos, este aqui é responsivo, porém não possui versão mobile como os meus temas mais recentes (lançado em 03/09/2018)."
             },
             "img": "https://78.media.tumblr.com/d668d5d0dad3922bfa62750a3d22c2e8/tumblr_pb3gib9M7B1skyizio1_r2_250.gif",
             "link": "https://anyhstheme45.tumblr.com",
@@ -173,8 +173,8 @@ let projectsData = [
                 "pt": "Tumblr Theme #001"
             },
             "description": {
-                "en": "A Tumblr theme for photography, with a responsive grid layout and minimalist style. My main goal with this theme is to offer a design that prioritizes image posts. This theme includes customization options that allows the theme to be used from 1 to 5 coluns.",
-                "pt": "Um tema para Tumblr de fotografia, com layout em grade responsivo e estilo minimalista. Meu principal objetivo com esse tema é oferecer um design que priorize posts de imagem. Esse tema possui opções de personalização que permitem que o tema seja usado de 1 a 5 colunas."
+                "en": "A Tumblr theme for photography, with a responsive grid layout and minimalist style. My main goal with this theme is to offer a design that prioritizes image posts. This theme includes customization options that allows the theme to be used from 1 to 5 columns, also includes a button to switch between light/dark mode and mobile version (released on March 17th of 2022 and updated for the last time on September 21th of 2023).",
+                "pt": "Um tema para Tumblr de fotografia, com layout em grade responsivo e estilo minimalista. Meu principal objetivo com esse tema é oferecer um design que priorize posts de imagem. Esse tema possui opções de personalização que permitem que o tema seja usado de 1 a 5 colunas, também inclui um botão para trocar entre modo claro/escuro e versão mobile (lançado em 17/03/2022 e atualizado pela última vez em 21/09/2023)."
             },
             "img": "img/theme001.jpg",
             "link": "https://anyhstheme001.tumblr.com",
@@ -187,8 +187,8 @@ let projectsData = [
                 "pt": "Tumblr Theme #002"
             },
             "description": {
-                "en": "Grid themes were the favorites among most of my followers, so here is another grid theme that can be used in 1 to 5 columns. Another mininalist design to keep focus on the images. Basically a version of my Theme #001 with Sidebar.",
-                "pt": "Temas em grade eram os preferidos da grande maioria dos meus seguidores, então aqui está outro tema em grade que pode ser usado de 1 a 5 colunas. Outro design minimalista para manter o foco nas imagens. Basicamente uma versão com Sidebar do meu Theme #001."
+                "en": "Grid themes were the favorites among most of my followers, so here is another grid theme that can be used in 1 to 5 columns. Another mininalist design to keep focus on the images. Basically a version of my Theme #001 with Sidebar, it has almost all of the same features (released on October 29th of 2022 and updated for the last time on September 21st of 2023).",
+                "pt": "Temas em grade eram os preferidos da grande maioria dos meus seguidores, então aqui está outro tema em grade que pode ser usado de 1 a 5 colunas. Outro design minimalista para manter o foco nas imagens. Basicamente uma versão com Sidebar do meu Theme #001 (lançado em 29/10/2022 e atualizado pela última vez em 21/09/2023)."
             },
             "img": "img/theme002.jpg",
             "link": "https://anyhstheme002.tumblr.com",
@@ -201,8 +201,8 @@ let projectsData = [
                 "pt": "Theme #034"
             },
             "description": {
-                "en": "A delicate grid Tumblr theme for photography blogs. I made this available as a premium theme at the time I released it.",
-                "pt": "Um tema para Tumblr delicado para blogs de fotografia. Eu disponibilizei esse como um tema premium na época em que eu lancei ele."
+                "en": "A delicate grid Tumblr theme for photography blogs including the same features as my 2 previous themes. I made this one available as a premium theme, so its code is unavailable since it's exclusive (released on May 29th of 2023 and last updated on September 21st of 2023).",
+                "pt": "Um tema para Tumblr delicado para blogs de fotografia. Eu disponibilizei ele como um tema premium, então seu código está indisponível por ser exclusivo (lançado em 29/05/2023 e atualizado pela última vez em 21/09/2023)."
             },
             "img": "img/theme034.jpg",
             "link": "https://anyhstheme034.tumblr.com",
@@ -229,8 +229,8 @@ let projectsData = [
                 "pt": "O Bug mais Constragedor que vivi no Stardew Valley (c/ mods)"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "Clips from a gameplay in which a funny bug happened.",
+                "pt": "Cortes de uma gameplay em que um bug engraçado aconteceu."
             },
             "img": "img/short-svme.avif",
             "link": "https://www.youtube.com/shorts/fHRl7r7eACA",
@@ -243,8 +243,8 @@ let projectsData = [
                 "pt": "Esse jogo vai destruir minha família... | R.E.P.O. c/ minhas irmãs"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "Funny moments from a REPO gameplay.",
+                "pt": "Cortes de momentos engraçados de uma gameplay de REPO."
             },
             "img": "img/short-repo.avif",
             "link": "https://www.youtube.com/shorts/b39wlHXexTc",
@@ -257,8 +257,8 @@ let projectsData = [
                 "pt": "Pensei que o guia deveria guiar... kkkk | Jogando Terraria pela Primeira Vez"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "Clips of me freaking out with the Guide in my first time playing Terraria at a livestream.",
+                "pt": "Cortes de mim surtando com o Guia na minha primeira vez jogando Terraria ao vivo."
             },
             "img": "img/short-terraria.avif",
             "link": "https://www.youtube.com/shorts/OwMW1LC53hU",
@@ -271,8 +271,8 @@ let projectsData = [
                 "pt": "5 Mods que Deviam vir por Padrão no Stardew Valley (1.6)"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "A short video presenting 5 mods for Stardew Valley that I made as a hook to my previous long form video, which was also presenting other mods for Stardew.",
+                "pt": "Um vídeo curto apresentando 5 mods para Stardew Valley que eu fiz como um gancho para o meu vídeo anterior de formato longo, que também era apresentando outros mods para Stardew"
             },
             "img": "img/short-sv-mods.webp",
             "link": "https://www.youtube.com/shorts/tUNeDiEcuMA",
@@ -285,8 +285,8 @@ let projectsData = [
                 "pt": "Tem algo MUITO Errado com essa Fazenda! | Pumpkin Panic"
             },
             "description": {
-                "en": "",
-                "pt": ""
+                "en": "A Halloween special gameplay in which I played a free horror game about surviving monsters in a farm.",
+                "pt": "Uma gameplay especial de Halloween jogando um jogo de terror gratuito sobre sobreviver a monstros em uma fazenda."
             },
             "img": "img/pumpkin-panic.webp",
             "link": "https://www.youtube.com/watch?v=hKv_8GK4QtY",
