@@ -491,7 +491,6 @@ aside#mobile-sidebar .sidebar {
     border: 1px solid var(--bordersColor);
     padding: var(--smallElementsPadding) calc(3 * var(--smallElementsPadding));
     border-radius: var(--smallElementsRadius);
-    background-color: var(--mainBgColor);
 }
 .sidebar #skills li i {
     margin-right: var(--smallElementsPadding);
@@ -548,3 +547,4 @@ aside#mobile-sidebar .sidebar {
     }
 
 }
+
