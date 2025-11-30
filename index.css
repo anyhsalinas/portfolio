@@ -314,7 +314,7 @@ main {
     display: table;
 }
 main section h1 {
-    text-align: left;
+    text-align: center;
     margin: calc(2 * var(--boxesSpacing)) 0px 0px var(--boxesSpacing);
     display: table;
     width: calc(100% - (2 * var(--boxesSpacing)));
@@ -324,7 +324,7 @@ main section:first-of-type h1 {
 }
 
 main section .section-description {
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid var(--bordersColor);
     display: table;
     width: calc(100% - (4 * var(--boxesPadding)));
@@ -547,4 +547,5 @@ aside#mobile-sidebar .sidebar {
     }
 
 }
+
 
